@@ -28,6 +28,7 @@ document.addEventListener("click", function(e) {
     if (typeof btn === 'undefined') {
         closeButton();
     } else {
+        // window.location = 'dogecoin:'+btn.getAttribute('data-address');
         btn.classList.add('opened');
         btn.querySelector('.currency').innerHTML = btn.getAttribute('data-address');
     }
