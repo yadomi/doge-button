@@ -36,11 +36,8 @@ This is my real dogecoin address, so you can donate if you want ;)
 
 You can change the button style just with css class. By default it's a yellow "pay with" button. If you want it black, just add the **black** class. You want a donate button ? Just add the **donate** class ! 
 
-	```
-	<div data-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="btn-dogecoin donate black"></div>
-	```
-
 #Improvements
 
 1. Add option to show a QR Code somewhere on the button
 2. Add option to show the dogecoin balance (e.g: using Dogechain API)
+3. Use `dogecoin:` URI
