@@ -28,6 +28,17 @@ module.exports = function(grunt) {
 				dest: 'dogebutton.min.css'
 			}
 		},
+		compress: {
+		  main: {
+			options: {
+			  archive: 'dogebutton.latest.zip'
+			},
+			files: [
+			  {src: ['*.min.css'], dest: 'dogebutton/', filter: 'isFile'}, // includes files in path
+			  {src: ['*.min.js'], dest: 'dogebutton/', filter: 'isFile'}, // includes files in path
+			]
+		  }
+		},		
 		watch: {
 			dist: {
 				files:  ['static/css/less/*.less'],
@@ -43,6 +54,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-compress');
 
 	grunt.registerTask('default', ['uglify', 'less:dist', 'autoprefixer']);
 }
