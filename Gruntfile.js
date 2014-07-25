@@ -41,8 +41,8 @@ module.exports = function(grunt) {
 		},		
 		watch: {
 			dist: {
-				files:  ['static/css/less/*.less'],
-				tasks: ['less', 'autoprefixer'],
+				files:  ['src/*'],
+				tasks: ['uglify', 'less', 'autoprefixer'],
 				options: {
 					spawn: false
 				}
