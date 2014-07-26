@@ -21,7 +21,6 @@ include('//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.min.
             event.clipboardData.setData('text/plain', event.target.dataset.address);
         } );
         clip.on( 'aftercopy', function(event) {
-            // event.traget.classList.add('copied');
             event.target.className += ' copied';
         });
     } );
