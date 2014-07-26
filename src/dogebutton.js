@@ -10,6 +10,25 @@ DogeButtons.forEach(function(btn) {
     }
 });
 
+include('//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.min.js', function(){
+    ZeroClipboard.config( {
+        swfPath: "//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.swf" , 
+        hoverClass: 'isHover'
+    } );
+    var clip = new ZeroClipboard(DogeButtons);
+    clip.on( 'ready', function(event) {
+        clip.on( 'copy', function(event) {
+            event.clipboardData.setData('text/plain', event.target.dataset.address);
+        } );
+        clip.on( 'aftercopy', function(event) {
+            event.target.className += ' copied';
+        });
+    } );
+    clip.on( 'error', function(event) {
+        ZeroClipboard.destroy();
+    } );    
+});
+
 function hasClass(el, classname) {
     return ((" " + el.className + " ").replace(/[\n\t]/g, " ").indexOf(classname) > -1)
 }
@@ -47,4 +66,16 @@ function getBalance(addr, callback){
             callback(xhr.responseText);
         }
     }
+}
+
+function include(path, callback){
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    script.src = path;
+    script.type = 'text/javascript';
+
+    script.onreadystatechange = callback;
+    script.onload = callback;
+
+    head.appendChild(script)
 }
