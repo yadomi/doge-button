@@ -3,9 +3,11 @@ var DogeButtons = [].slice.call(document.querySelectorAll('.btn-dogecoin'));
 
 DogeButtons.forEach(function(btn) {
     btn.innerHTML = DogeContent;
-    getBalance(btn.getAttribute('data-address'), function(data){
-        btn.dataset.balance = data;
-    });
+    if(hasClass(btn, 'donate')){
+        getBalance(btn.getAttribute('data-address'), function(data){
+            btn.querySelector('.symbol').dataset.balance = Math.round(data).toFixed(2);
+        });
+    }
 });
 
 function hasClass(el, classname) {
