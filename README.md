@@ -7,7 +7,13 @@ DogeButton is a simple HTML dogecoin donation button which can be easily integra
 
 I've made this button on my spare time on my [CodePen](http://codepen.io/yadomi/pen/EGiKD) and find it cool, so I made a No-jQuery version and decided to share it on GitHub. 
 
-You can see it working [here](http://cakelabs.fr/doge)
+You can see it working [here](http://cakelabs.fr/doge) or checkout the demo.html in this repo.
+
+#Features
+
+ - Show address balance on hover (only with Donate button)
+ - Copy address to clipboard when clicking on it
+ - Such beautiful
 
 #How to add on your website
 
@@ -52,4 +58,6 @@ To use the donate button, just add the **donate** class to the DogeButton
 
 1. Add option to show a QR Code somewhere on the button
 2. ~~Add option to show the dogecoin balance (e.g: using Dogechain API)~~
-3. Use `dogecoin:` URI
+3. ~~Remove jQuery dependency~~
+4. ~~Add Copy-to-Clipboard option~~ 
+5. Use `dogecoin:` URI
