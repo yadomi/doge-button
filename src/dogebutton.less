@@ -15,6 +15,15 @@
     color: #333;
     text-transform: uppercase;
     transition: width .35s ease;
+    &.copied:after{
+        content: 'copied !';
+        display: block;
+        position: absolute;
+        right: 9px;
+        top: 6px;
+        font-size: 10px;
+        animation: fadeOut 5s linear forwards;
+    }
     span {
         display: block;
     }
@@ -47,7 +56,7 @@
         display: inline-block;
         white-space: nowrap;
     }
-    &:hover {
+    &.isHover {
         p {
             transform: translateX(120px);
         }
@@ -57,7 +66,7 @@
     }
     &.opened {
         width: 390px;
-        &:hover {
+        &.isHover {
             p {
                 transform: inherit;
                 cursor: text;
@@ -76,7 +85,7 @@
     }
 }
 .btn-dogecoin.donate {
-    &:hover{
+    &.isHover{
         .symbol {
             position: relative;
             transform: translateX(115px);
@@ -124,4 +133,12 @@
         background-color: #272515;
         border-color: #323520;
     }
+}
+
+@keyframes fadeOut {
+    0%  { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; transform: translateY(0px);}
+    99% { opacity: 0; transform: translateY(-30px);}
+    100% { opacity: 0; }
 }
