@@ -63,7 +63,7 @@
                 cursor: text;
             }
             .symbol {
-                transform: inherit;
+                transform: inherit ;
             }
         }
         .currency {
@@ -76,6 +76,28 @@
     }
 }
 .btn-dogecoin.donate {
+    &:hover{
+        .symbol {
+            position: relative;
+            transform: translateX(115px);
+        }
+        .symbol:before {
+            display: block;
+            content: 'Current balance';
+            font-size: .30em;
+            position: absolute;
+            top:-5px;
+            left:-115px;
+        }
+        .symbol:after {
+            display: block;
+            content: attr(data-balance);
+            font-size: 15px;
+            position: absolute;
+            top: 11px;
+            left: -115px;
+        }        
+    }
     .currency:before {
         content: 'Make a donation';
         font-size: .65em;
@@ -84,6 +106,9 @@
     &.opened {
         .currency:before {
             content: 'wow such generous !';
+        }
+        .symbol {
+           transform: inherit;
         }
     }
 }

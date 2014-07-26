@@ -2,7 +2,12 @@ var DogeContent = '<div class="symbol">Ð </div><p><span class="currency">Dogeco
 var DogeButtons = [].slice.call(document.querySelectorAll('.btn-dogecoin'));
 
 DogeButtons.forEach(function(btn) {
-    btn.innerHTML = DogeContent
+    btn.innerHTML = DogeContent;
+    if(hasClass(btn, 'donate')){
+        getBalance(btn.getAttribute('data-address'), function(data){
+            btn.querySelector('.symbol').dataset.balance = Math.round(data).toFixed(2);
+        });
+    }
 });
 
 function hasClass(el, classname) {
@@ -32,3 +37,14 @@ document.addEventListener("click", function(e) {
         btn.querySelector('.currency').innerHTML = btn.getAttribute('data-address');
     }
 });
+
+function getBalance(addr, callback){
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://dogechain.info/chain/Dogecoin/q/addressbalance/"+addr ,true);
+    xhr.send();
+    xhr.onreadystatechange =  function(){
+        if ((xhr.readyState == 4) && (xhr.status == 200)) {
+            callback(xhr.responseText);
+        }
+    }
+}
