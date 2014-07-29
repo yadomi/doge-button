@@ -36,7 +36,7 @@ You can see it working [here](http://cakelabs.fr/doge) or checkout the demo.html
 	```
 **/!\ Don't forget to change the data-address attribute to match your wallet address !**
 
-This is my real dogecoin address, so you can donate if you want ;) 
+This is my real dogecoin address, so you can donate to **DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F** if you want ;) 
 
 #Options
 
