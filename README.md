@@ -14,6 +14,7 @@ You can see it working [here](http://cakelabs.fr/doge) or checkout the demo.html
  - Show address balance on hover (only with Donate button)
  - Copy address to clipboard when clicking on it
  - Such beautiful
+ - Only 5.4kb (JS+CSS)
 
 #How to add on your website
 
