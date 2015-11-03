@@ -21,7 +21,10 @@ include('//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.min.
             event.clipboardData.setData('text/plain', event.target.dataset.address);
         } );
         clip.on( 'aftercopy', function(event) {
-            event.target.className += ' copied';
+            event.target.classList.add('copied')
+            setTimeout(function(){
+                event.target.classList.remove('copied')
+            }, 3100);
         });
     } );
     clip.on( 'error', function(event) {
