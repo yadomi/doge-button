@@ -45,20 +45,19 @@ var closeButton = function() {
     });
 }
 
-document.addEventListener("click", function(e) {
-    var el = e.target;
-    if (hasClass(el, 'symbol')) {
-        if (hasClass(el.parentNode, 'btn-dogecoin')) var btn = el.parentNode;
-    } else {
-        if (hasClass(el, 'btn-dogecoin')) var btn = e.target;
-    }
-    if (typeof btn === 'undefined') {
+DogeButtons.forEach(function(button){
+    button.addEventListener('click', bindClickEvent);
+});
+
+function bindClickEvent(event) {
+    var btn = event.currentTarget;
+    if (hasClass(btn, prefixClass('opened'))) {
         closeButton();
     } else {
-        btn.classList.add('opened');
-        btn.querySelector('.currency').innerHTML = btn.getAttribute('data-address');
+        btn.classList.add(prefixClass('opened'));
+        btn.querySelector('.' + prefixClass('currency')).innerHTML = btn.getAttribute('data-xdgbtn-address');
     }
-});
+}
 
 function getBalance(addr, callback){
     var xhr = new XMLHttpRequest();
