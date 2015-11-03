@@ -7,7 +7,7 @@ DogeButton is a simple HTML dogecoin donation button which can be easily integra
 
 I've made this button on my spare time on my [CodePen](http://codepen.io/yadomi/pen/EGiKD) and find it cool, so I made a No-jQuery version and decided to share it on GitHub. 
 
-You can see it working [here](http://cakelabs.fr/doge) or checkout the demo.html in this repo.
+You can see it working [here](http://yadomi.github.io/doge-button/) or checkout the demo.html in this repo.
 
 #Features
 
