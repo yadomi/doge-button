@@ -1,11 +1,13 @@
-var DogeContent = '<div class="symbol">Ð </div><p><span class="currency">Dogecoin</span></p>';
-var DogeButtons = [].slice.call(document.querySelectorAll('[data-dogecoin-button]'));
+var DogeClassPrefix = 'xdgbtn-';
+
+var DogeContent = '<div class="' + DogeClassPrefix + 'symbol">Ð </div><p><span class="' + DogeClassPrefix + 'currency">Dogecoin</span></p>';
+var DogeButtons = [].slice.call(document.querySelectorAll('[data-xdgbtn-address]'));
 
 DogeButtons.forEach(function(btn) {
     btn.innerHTML = DogeContent;
-    if(hasClass(btn, 'donate')){
-        getBalance(btn.getAttribute('data-address'), function(data){
-            btn.querySelector('.symbol').dataset.balance = Math.round(data).toFixed(2);
+    if(hasClass(btn, prefixClass('donate'))){
+        getBalance(btn.getAttribute('data-xdgbtn-address'), function(data){
+            btn.querySelector('.' + prefixClass('symbol')).dataset.balance = Math.round(data).toFixed(2);
         });
     }
 });
@@ -38,9 +40,9 @@ function hasClass(el, classname) {
 
 var closeButton = function() {
     DogeButtons.forEach(function(btn) {
-        if (hasClass(btn, 'opened')) {
-            btn.classList.remove('opened');
-            btn.querySelector('.currency').innerHTML = 'Dogecoin';
+        if (hasClass(btn, prefixClass('opened'))) {
+            btn.classList.remove(prefixClass('opened'));
+            btn.querySelector('.' + prefixClass('currency')).innerHTML = 'Dogecoin';
         }
     });
 }

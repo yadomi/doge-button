@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat');
-[data-dogecoin-button] {
+[data-xdgbtn-address] {
     font-size: 14px;
     white-space: nowrap;
     position: relative;
@@ -27,15 +27,15 @@
     span {
         display: block;
     }
-    .currency {
+    .xdgbtn-currency {
         font-size: 1.1em;
     }
-    .currency:before {
+    .xdgbtn-currency:before {
         content: 'Pay with';
         font-size: .65em;
         display: block;
     }
-    .symbol {
+    .xdgbtn-symbol {
         transition: all .2s ease;
         font-size: 2.3em;
         border: 2px solid #333;
@@ -52,7 +52,7 @@
         padding: 0;
         margin: 0;
     }
-    .symbol, p {
+    .xdgbtn-symbol, p {
         display: inline-block;
         white-space: nowrap;
     }
@@ -60,37 +60,37 @@
         p {
             transform: translateX(120px);
         }
-        .symbol {
+        .xdgbtn-symbol {
             transform: translateX(60px);
         }
     }
-    &.opened {
+    &.xdgbtn-opened {
         width: 390px;
         &.isHover, &:hover {
             p {
                 transform: inherit;
                 cursor: text;
             }
-            .symbol {
+            .xdgbtn-symbol {
                 transform: inherit ;
             }
         }
-        .currency {
+        .xdgbtn-currency {
             text-transform: initial;
         }
-        .currency:before {
+        .xdgbtn-currency:before {
             content: 'Thank you !';
             text-transform: uppercase;
         }
     }
 }
-[data-dogecoin-button].donate {
+[data-xdgbtn-address].xdgbtn-donate {
     &.isHover, &:hover{
-        .symbol {
+        .xdgbtn-symbol {
             position: relative;
             transform: translateX(115px);
         }
-        .symbol:before {
+        .xdgbtn-symbol:before {
             display: block;
             content: 'Current balance';
             font-size: .30em;
@@ -98,38 +98,38 @@
             top:-5px;
             left:-115px;
         }
-        .symbol:after {
+        .xdgbtn-symbol:after {
             display: block;
             content: attr(data-balance);
             font-size: 15px;
             position: absolute;
             top: 11px;
             left: -115px;
-        }        
+        }
     }
-    .currency:before {
+    .xdgbtn-currency:before {
         content: 'Make a donation';
         font-size: .65em;
         display: block;
     }
-    &.opened {
-        .currency:before {
+    &.xdgbtn-opened {
+        .xdgbtn-currency:before {
             content: 'wow such generous !';
         }
-        .symbol {
+        .xdgbtn-symbol {
            transform: inherit;
         }
     }
 }
-[data-dogecoin-button].black {
+[data-xdgbtn-address].xdgbtn-black {
     color: #fbbc3a;
     border-color: #323520;
     background-image: none;
     background-color: #272515;
-    .symbol {
+    .xdgbtn-symbol {
         border-color: #fbbc3a;
     }
-    &.opened:after {
+    &.xdgbtn-opened:after {
         background-color: #272515;
         border-color: #323520;
     }
