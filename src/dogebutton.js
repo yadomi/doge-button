@@ -61,6 +61,10 @@ function bindClickEvent(event) {
     }
 }
 
+function prefixClass(className) {
+    return DogeClassPrefix + className;
+}
+
 function getBalance(addr, callback){
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "https://dogechain.info/chain/Dogecoin/q/addressbalance/"+addr ,true);
