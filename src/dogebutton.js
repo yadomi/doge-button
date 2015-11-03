@@ -1,11 +1,13 @@
-var DogeContent = '<div class="symbol">Ð </div><p><span class="currency">Dogecoin</span></p>';
-var DogeButtons = [].slice.call(document.querySelectorAll('.btn-dogecoin'));
+var DogeClassPrefix = 'xdgbtn-';
+
+var DogeContent = '<div class="' + DogeClassPrefix + 'symbol">Ð </div><p><span class="' + DogeClassPrefix + 'currency">Dogecoin</span></p>';
+var DogeButtons = [].slice.call(document.querySelectorAll('[data-xdgbtn-address]'));
 
 DogeButtons.forEach(function(btn) {
     btn.innerHTML = DogeContent;
-    if(hasClass(btn, 'donate')){
-        getBalance(btn.getAttribute('data-address'), function(data){
-            btn.querySelector('.symbol').dataset.balance = Math.round(data).toFixed(2);
+    if(hasClass(btn, prefixClass('donate'))){
+        getBalance(btn.getAttribute('data-xdgbtn-address'), function(data){
+            btn.querySelector('.' + prefixClass('symbol')).dataset.balance = Math.round(data).toFixed(2);
         });
     }
 });
@@ -21,12 +23,15 @@ include('//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.min.
             event.clipboardData.setData('text/plain', event.target.dataset.address);
         } );
         clip.on( 'aftercopy', function(event) {
-            event.target.className += ' copied';
+            event.target.classList.add('copied')
+            setTimeout(function(){
+                event.target.classList.remove('copied')
+            }, 3100);
         });
     } );
     clip.on( 'error', function(event) {
         ZeroClipboard.destroy();
-    } );    
+    } );
 });
 
 function hasClass(el, classname) {
@@ -35,27 +40,26 @@ function hasClass(el, classname) {
 
 var closeButton = function() {
     DogeButtons.forEach(function(btn) {
-        if (hasClass(btn, 'opened')) {
-            btn.classList.remove('opened');
-            btn.querySelector('.currency').innerHTML = 'Dogecoin';
+        if (hasClass(btn, prefixClass('opened'))) {
+            btn.classList.remove(prefixClass('opened'));
+            btn.querySelector('.' + prefixClass('currency')).innerHTML = 'Dogecoin';
         }
     });
 }
 
-document.addEventListener("click", function(e) {
-    var el = e.target;
-    if (hasClass(el, 'symbol')) {
-        if (hasClass(el.parentNode, 'btn-dogecoin')) var btn = el.parentNode;
-    } else {
-        if (hasClass(el, 'btn-dogecoin')) var btn = e.target;
-    }
-    if (typeof btn === 'undefined') {
+DogeButtons.forEach(function(button){
+    button.addEventListener('click', bindClickEvent);
+});
+
+function bindClickEvent(event) {
+    var btn = event.currentTarget;
+    if (hasClass(btn, prefixClass('opened'))) {
         closeButton();
     } else {
-        btn.classList.add('opened');
-        btn.querySelector('.currency').innerHTML = btn.getAttribute('data-address');
+        btn.classList.add(prefixClass('opened'));
+        btn.querySelector('.' + prefixClass('currency')).innerHTML = btn.getAttribute('data-xdgbtn-address');
     }
-});
+}
 
 function getBalance(addr, callback){
     var xhr = new XMLHttpRequest();

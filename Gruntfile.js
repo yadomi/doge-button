@@ -38,10 +38,10 @@ module.exports = function(grunt) {
 			  {src: ['*.min.js'], dest: 'dogebutton/', filter: 'isFile'}, // includes files in path
 			]
 		  }
-		},		
+		},
 		watch: {
 			dist: {
-				files:  ['src/*'],
+				files: ['src/*'],
 				tasks: ['uglify', 'less', 'autoprefixer'],
 				options: {
 					spawn: false
