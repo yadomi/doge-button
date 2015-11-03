@@ -31,7 +31,7 @@ include('//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.5/ZeroClipboard.min.
     } );
     clip.on( 'error', function(event) {
         ZeroClipboard.destroy();
-    } );    
+    } );
 });
 
 function hasClass(el, classname) {
