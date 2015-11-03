@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>DogeButton ! wow</title>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/yadomi/DogeButton/v0.3.0/dogebutton.min.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/yadomi/DogeButton/v0.4.0/dogebutton.min.css">
 	<style type="text/css">
 	@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 	body{
@@ -47,17 +47,17 @@
 		background-color: #00aee6;
 		color:#fff;
 	}
-	.btn-dogecoin{
+	[data-xdgbtn-address]{
 		margin:20px 0;
 	}
 	.btn-holder{
 		position: relative;
 	}
-	.btn-holder .btn-dogecoin{
+	.btn-holder [data-xdgbtn-address]{
 		white-space: nowrap;
 		overflow: hidden;
 	}
-	.btn-holder .btn-dogecoin:nth-child(2){
+	.btn-holder [data-xdgbtn-address]:nth-child(2){
 		position: absolute;
 		left:425px;
 		top:0;
@@ -78,9 +78,9 @@
 	<section>
 		<h1>Add a dogecoin button to your site ! Such easy.</h1>
 		<h2>Just add buttons anywhere on your page with your <strong>wallet</strong> address:</h2>
-		<code><pre>&lt;div data-address=&quot;DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F&quot; class=&quot;btn-dogecoin&quot;&gt;&lt;/div&gt;</pre></code>
+		<code><pre>&lt;div data-xdgbtn-address=&quot;DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F&quot; &gt;&lt;/div&gt;</pre></code>
 		<h2>That's it ! You have your button ! much click</h2>
-		<div data-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="btn-dogecoin"></div>
+		<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
 		<p class="center cs">This is my real dogecoin address so you can many donate if you want ! :)</p>
 		<p class="center dl">
 			<a href="https://github.com/yadomi/DogeButton/releases" class="btn-download">very Download !</a>
@@ -88,18 +88,18 @@
 		</p>
 		<h1>Very options !</h1>
 		<p> You can change the button style just with css class. By default it's a yellow "pay with" button.
-			If you want it black, just add the <strong>black</strong> class. You want a donate button ? Just add the <strong>donate</strong> class !</p>
+			If you want it black, just add the <strong>xdgbtn-black</strong> class. You want a donate button ? Just add the <strong>xdgbtn-donate</strong> class !</p>
 
 		<div class="btn-holder">
-			<div data-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="btn-dogecoin black"></div>
-			<div data-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="btn-dogecoin donate"></div>
+			<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-black"></div>
+			<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-donate"></div>
 		</div>
 
 	</section>
 	<footer>
 		CakeLabs © - Félix Yadomi - 2014 - Donate !
 	</footer>
-	<script type="text/javascript" src="https://cdn.rawgit.com/yadomi/DogeButton/v0.3.0/dogebutton.min.js"></script>
+	<script type="text/javascript" src="https://cdn.rawgit.com/yadomi/DogeButton/v0.4.0/dogebutton.min.js"></script>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
