@@ -33,7 +33,7 @@ You can see it working [here](http://yadomi.github.io/doge-button/) or checkout 
 3. Add button everywhere you want !
 
 	```
-	<div data-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="btn-dogecoin"></div>
+	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
 	```
 **/!\ Don't forget to change the data-address attribute to match your wallet address !**
 
@@ -42,7 +42,7 @@ This is my real dogecoin address, so you can donate to **DKVtwbh8YWrXtn5qz8DTB9Z
 #Options
 
 ###Button Apparence
-DogeButton has two theme, by default it's yellow background with dark characters. If you want a darker theme, just add the **black** class to the DogeButton.
+DogeButton has two theme, by default it's yellow background with dark characters. If you want a darker theme, just add the **xdgbtn-black** class to the DogeButton.
 
 ###Button Type
 
@@ -51,7 +51,7 @@ There are two type of button:
 - The default one is the *pay with* button which only display the Dogecoin address.
 - The donation button, which display the balance of the address on hover.
 
-To use the donate button, just add the **donate** class to the DogeButton
+To use the donate button, just add the **xdgbtn-donate** class to the DogeButton
 
 	<div data-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="btn-dogecoin donate black"></div>
 
