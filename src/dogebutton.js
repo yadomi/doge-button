@@ -1,5 +1,5 @@
 var DogeContent = '<div class="symbol">Ð </div><p><span class="currency">Dogecoin</span></p>';
-var DogeButtons = [].slice.call(document.querySelectorAll('.btn-dogecoin'));
+var DogeButtons = [].slice.call(document.querySelectorAll('[data-dogecoin-button]'));
 
 DogeButtons.forEach(function(btn) {
     btn.innerHTML = DogeContent;
