@@ -55,9 +55,9 @@ There are two type of button:
 
 To use the donate button, just add the **xdgbtn-donate** class to the DogeButton
 
-	```html
+```html
 	<div data-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="btn-dogecoin donate black"></div>
-	```
+```
 
 # Improvements
 
