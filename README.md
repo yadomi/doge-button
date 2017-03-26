@@ -9,7 +9,7 @@ I've made this button on my spare time on my [CodePen](http://codepen.io/yadomi/
 
 You can see it working [here](http://yadomi.github.io/doge-button/) or checkout the demo.html in this repo.
 
-#Features
+# Features
 
  - Show address balance on hover (only with Donate button)
  - Copy address to clipboard when clicking on it
