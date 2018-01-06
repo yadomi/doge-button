@@ -27,7 +27,7 @@ You can see it working [here](http://yadomi.github.io/doge-button/) or checkout 
 2. Include `dogebutton.min.js` at the very end of the page, just before the **body** tag
 
 	```html
-	<script type="text/javascript" src="dogebutton/dogecoin.min.js"></script>
+	<script type="text/javascript" src="dogebutton/dogebutton.min.js"></script>
 	```
 
 3. Add button everywhere you want !
