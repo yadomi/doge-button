@@ -1,12 +1,12 @@
 {
-  "name": "DogeButton",
+  "name": "doge-button",
   "private": true,
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-contrib-less": "~0.11.3",
-    "grunt-autoprefixer": "~0.8.1",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-uglify": "~0.5.1",
-    "grunt-contrib-compress": "~0.10.0"
+    "postcss": "^8.2.6",
+    "rollup": "^2.39.0",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-size-snapshot": "^0.12.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "autoprefixer": "^10.2.4"
   }
 }
