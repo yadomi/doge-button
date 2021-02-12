@@ -1,0 +1,15 @@
+[data-xdgbtn-address].xdgbtn-lang-fr-FR .xdgbtn-currency:before {
+	content: 'Payer avec';
+}
+
+[data-xdgbtn-address].xdgbtn-lang-fr-FR.xdgbtn-donate .xdgbtn-symbol:before {
+	content: 'Dogecoin donné';
+}
+
+[data-xdgbtn-address].xdgbtn-lang-fr-FR.xdgbtn-donate .xdgbtn-currency:before {
+	content: 'Faire un don';
+}
+
+[data-xdgbtn-address].xdgbtn-lang-fr-FR > div span:nth-child(1)::before {
+	content: 'Copié  !'
+}
