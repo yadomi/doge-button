@@ -1,20 +1,24 @@
 DogeButton ! wow
 ==========
 
-DogeButton is a simple HTML dogecoin donation button which can be easily integrate to any website.
+DogeButton is a simple HTML dogecoin donation button which can be easily integrated to any website. wow.
 
-![image](http://i.imgur.com/goithwm.gif)
+![image](https://i.imgur.com/eKRBFA1.gif)
 
 I've made this button on my spare time on my [CodePen](http://codepen.io/yadomi/pen/EGiKD) and find it cool, so I made a No-jQuery version and decided to share it on GitHub.
 
-You can see it working [here](http://yadomi.github.io/doge-button/) or checkout the demo.html in this repo.
+You can see it working [here](http://yadomi.github.io/doge-button/) or checkout the [demo.html](https://github.com/yadomi/doge-button/blob/master/demo.html) in this repo.
+
+## Update 2021
+
+This repository has been visited quite often recently because of doge going to the moon. I did this thing back in 2014 and realized now it didn't have a real doge theme. Say no more, I've updated it with very doge theme, much removed zeroclipoard dep and ditched grunt for rollup. To the moon :rocket: !
 
 # Features
 
  - Show address balance on hover (only with Donate button)
- - Copy address to clipboard when clicking on it
+ - Copy address to clipboard when clicking on it, wow
  - Such beautiful
- - Only 5.4kb (JS+CSS)
+ - Very Locale support (en-US, fr-FR)
 
 # How to add on your website
 
@@ -36,33 +40,44 @@ You can see it working [here](http://yadomi.github.io/doge-button/) or checkout 
 	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
 	```
 
-**/!\ Don't forget to change the data-address attribute to match your wallet address !**
-
-This is my real dogecoin address, so you can donate to **DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F** if you want ;)
+Note: This is my real dogecoin address, so you can donate to **DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F** if you want :)
 
 # Options
 
+All options are class based, to use them, add the class you want on the button itself
+
 ### Button Apparence
 
-DogeButton has two theme, by default it's yellow background with dark characters. If you want a darker theme, just add the **xdgbtn-black** class to the DogeButton.
+DogeButton has two theme, by default it's a serious theme with a serious font, it's called the corpo theme.
+But dogecoin is all about fun, so there is also a Comic Sans MS version with doge instead of D.
+
+#### Themes
+
+- `xdgbtn-theme-corpo` **(default)**:  A good looking but boring theme
+- `xdgbtn-theme-doge`: This is the real theme, Comic Sans MS font and very doge much theme
+
+#### Colors variation
+
+- **(default)**:  a yellow background with a dark font color
+- `xdgbtn-black` **(default)**: a dark background with a yellow font color
 
 ### Button Type
 
 There are two type of button:
 
-- The default one is the *pay with* button which only display the Dogecoin address.
-- The donation button, which display the balance of the address on hover.
+- **(default)**: The default one is the *pay with* button which only display the Dogecoin address.
+- `xdgbtn-donate`: The donation button, which display the balance of the address on hover.
 
-To use the donate button, just add the **xdgbtn-donate** class to the DogeButton
+### Locale
+
+To add a locale, add the corresponding stylesheet
 
 ```html
-	<div data-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="btn-dogecoin donate black"></div>
+<script type="text/javascript" src="dogebutton/dogebutton_fr-FR.min.js"></script>
 ```
 
-# Improvements
+Then add the `xdgbtn-lang-xx-XX` class to your button
 
-1. Add option to show a QR Code somewhere on the button
-2. ~~Add option to show the dogecoin balance (e.g: using Dogechain API)~~
-3. ~~Remove jQuery dependency~~
-4. ~~Add Copy-to-Clipboard option~~
-5. Use `dogecoin:` URI
+```html
+<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-lang-fr-FR"></div>
+```
