@@ -2,18 +2,62 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>DogeButton Demo</title>
-	<link rel="stylesheet" href="dogebutton.min.css">
+	<link rel="stylesheet" href="dist/dogebutton.min.css">
+	<link rel="stylesheet" href="dist/dogebutton_fr-FR.min.css">
 	<style type="text/css">
+
+	html {
+		color: transparent;
+	}
+	h2, h3, h4 {
+		display: none;
+	}
+
+	html {
+		font-family: sans-serif;
+	}
 	body > div {
 		margin: 30px;
+		margin-top: 20px;
+	}
+	h2, h3, h4 {
+		margin: 0;
+	}
+
+	h3 {
+		margin-top: 10px;
+	}
+
+	h4 {
+		margin-left: 30px;
+		margin-top: 10px;
 	}
 	</style>
 </head>
 <body>
-	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-donate xdgbtn-black"></div>
-	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class=""></div>
-	<script type="text/javascript" src="src/dogebutton.js"></script>
+	<h2>Default</h2>
+	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+	<h2>Donate</h2>
+	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-donate"></div>
+
+	<h2>Themes / Variantion</h2>
+	<h3>Corpo</h3>
+	<h4>Default</h4>
+	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F"></div>
+	<h4>Black</h4>
+	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-black"></div>
+	<h3>Doge</h3>
+	<h4>Default</h4>
+	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-theme-doge"></div>
+	<h4>Black</h4>
+	<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-donate xdgbtn-theme-doge xdgbtn-black"></div>
+
+	<h2>Locale</h2>
+	<h3>French</h3>
+		<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-lang-fr-FR"></div>
+		<div data-xdgbtn-address="DKVtwbh8YWrXtn5qz8DTB9ZamoYXneKn9F" class="xdgbtn-lang-fr-FR xdgbtn-donate"></div>
+
+	<script type="text/javascript" src="dist/dogebutton.min.js"></script>
 </body>
 </html>
