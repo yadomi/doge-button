@@ -13,6 +13,7 @@
 	text-transform: uppercase;
 	display: block;
 	width: calc(160px + (12px * 2));
+	height: 45px;
 }
 
 [data-xdgbtn-address] section {
@@ -81,7 +82,7 @@
 }
 
 [data-xdgbtn-address].xdgbtn-theme-corpo .xdgbtn-symbol span {
-	font-size: 2.3em;
+	font-size: 30em;
 	width: 45px;
 	height: 45px;
 	display: flex;
