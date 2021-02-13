@@ -1,6 +1,9 @@
 {
   "name": "doge-button",
   "private": true,
+  "scripts": {
+    "build": "rollup --config rollup.config.js"
+  },
   "devDependencies": {
     "postcss": "^8.2.6",
     "rollup": "^2.39.0",
