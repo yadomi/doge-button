@@ -5,7 +5,7 @@
     "build": "rollup --config rollup.config.js"
   },
   "devDependencies": {
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.10",
     "rollup": "^2.39.0",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-size-snapshot": "^0.12.0",
